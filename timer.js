@@ -25,7 +25,7 @@ function startTimer(){
     updateTiemr();
     if(timeLeft === 0){
         clearInterval(interval)
-        //alert("time is up");
+        //alert("time is up");   
         
     }
    }, 1000) 
@@ -36,17 +36,20 @@ function stopTimer(){
 function resetTimer(){
     console.log("reset");    
 }
-startE1.addEventListener("click", function() {
-    let reply = prompt("Timer started"); 
-    if(reply.toLowerCase() === "yes") {
-        timeOut(() => {
-            document.body.innerHTML = "";
-        }, 5000);
-    } else {
-        timeOut(() => {
-            document.body.innerHTML = "";
-        }, 1000);
-    }
-});
+startE1.addEventListener("click", () => {
+    timeLeft++;
+})
+// startE1.addEventListener("click", function() {
+//     let reply = prompt("Timer started"); 
+//     if(reply.toLowerCase() === "yes") {
+//         timeOut(() => {
+//             document.body.innerHTML = "";
+//         }, 5000);
+//     } else {
+//         timeOut(() => {
+//             document.body.innerHTML = "";
+//         }, 1000);
+//     }
+// });
 stopE1.addEventListener("click", stopTimer) 
 resetE1.addEventListener("click", resetTimer) 
